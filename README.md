@@ -100,7 +100,7 @@ The message payload can be anything.
 This should be done prior to destroying a producer instance  
 to make sure all queued and in-flight produce requests are completed  
 before terminating. Use a reasonable value for `$timeout_ms`.  
-:warning: Not calling flush can lead to message loss!
+:warning: Not calling flush can lead to message loss! In versions [4.0.0+](https://github.com/arnaud-lb/php-rdkafka/releases/tag/4.0.0) it is MUST
 
 ```php
 $rk->flush($timeout_ms);
